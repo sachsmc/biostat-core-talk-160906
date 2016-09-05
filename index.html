@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Michael Sachs" />
-  <meta name="date" content="2016-09-05" />
+  <meta name="date" content="2016-09-06" />
   <title>Some Tools for Reproducible Research</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
@@ -55,7 +55,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <p class="author">
 Michael Sachs
   </p>
-  <p class="date">2016-09-05</p>
+  <p class="date">2016-09-06</p>
 </div>
 <div id="at-the-lab" class="slide section level1">
 <h1>At the lab?</h1>
@@ -230,7 +230,7 @@ Michael Sachs
 ```</code></pre>
 <p>See <a href="http://yihui.name/knitr/options#chunk_options" class="uri">http://yihui.name/knitr/options#chunk_options</a> for all available options.</p>
 <p>Inline code uses single backticks</p>
-<p>Here I am using <code>`#r rnorm(1)`</code> to generate a random digit: 0.6795769. (Omit the pound sign)</p>
+<p>Here I am using <code>`#r rnorm(1)`</code> to generate a random digit: -0.2343425. (Omit the pound sign)</p>
 </div>
 <div id="results-raw-output" class="slide section level1 smaller">
 <h1>Results, raw output</h1>
@@ -505,7 +505,7 @@ summary(lm(mpg ~ hp + wt, data = mtcars))
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(xtable)
 <span class="kw">print</span>(<span class="kw">xtable</span>(<span class="kw">head</span>(mtcars)), <span class="dt">type =</span> <span class="st">&quot;html&quot;</span>)</code></pre></div>
 <!-- html table generated in R 3.3.1 by xtable 1.8-2 package -->
-<!-- Mon Sep 05 15:13:12 2016 -->
+<!-- Mon Sep 05 15:15:44 2016 -->
 <table border="1">
 <tr>
 <th>
@@ -938,7 +938,7 @@ Valiant
 }
 
 ## The mean (sd) of a random sample of normals is `r paste_meansd(rnorm(100))`</code></pre></div>
-<p>The mean (sd) of a random sample of normals is 0.11 (1.08)</p>
+<p>The mean (sd) of a random sample of normals is -0.05 (0.97)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sprint_CI95 &lt;-<span class="st"> </span>function(mu, se) {
   lim &lt;-<span class="st"> </span>mu +<span class="st"> </span><span class="kw">c</span>(-<span class="fl">1.96</span>, <span class="fl">1.96</span>) *<span class="st"> </span>se
   ### &lt;b&gt;
@@ -1057,7 +1057,7 @@ output: slidy_presentation
 <li>Rmarkdown, Rstudio. <a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a></li>
 <li>Wilson, Greg, Bryan, Jennifer, Cranston, Karen, et al. “Good Enough Practices in Scientific Computing” (2016). <a href="https://arxiv.org/pdf/1609.00037v1.pdf" class="uri">https://arxiv.org/pdf/1609.00037v1.pdf</a></li>
 </ol>
-<p>Source for this talk available at <a href="http://github.com/sachsmc/bcore-talk-160906" class="uri">http://github.com/sachsmc/bcore-talk-160906</a></p>
+<p>Source for this talk available at <a href="http://github.com/sachsmc/biostat-core-talk-160906" class="uri">http://github.com/sachsmc/biostat-core-talk-160906</a></p>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->

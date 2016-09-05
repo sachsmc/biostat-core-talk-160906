@@ -1,7 +1,7 @@
 ---
 title: "Some Tools for Reproducible Research"
 author: "Michael Sachs"
-date: "`r Sys.Date()`"
+date: "2016-09-06"
 output: 
     slidy_presentation:
         keep_md: true
@@ -368,6 +368,6 @@ output: slidy_presentation
 10. Wilson, Greg, Bryan, Jennifer, Cranston, Karen, et al. "Good Enough Practices in Scientific Computing" (2016). https://arxiv.org/pdf/1609.00037v1.pdf
 
 
-Source for this talk available at http://github.com/sachsmc/bcore-talk-160906
+Source for this talk available at http://github.com/sachsmc/biostat-core-talk-160906
 
 

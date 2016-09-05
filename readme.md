@@ -1,6 +1,6 @@
 # Some Tools for Reproducible Research
 Michael Sachs  
-`r Sys.Date()`  
+2016-09-06  
 
 
 
@@ -167,7 +167,7 @@ See http://yihui.name/knitr/options#chunk_options for all available options.
 
 Inline code uses single backticks
 
-Here I am using `` `#r rnorm(1)` `` to generate a random digit: 0.6795769. (Omit the pound sign)
+Here I am using `` `#r rnorm(1)` `` to generate a random digit: -0.2343425. (Omit the pound sign)
 
 # Results, raw output {.smaller}
 
@@ -269,7 +269,7 @@ print(xtable(head(mtcars)), type = "html")
 ```
 
 <!-- html table generated in R 3.3.1 by xtable 1.8-2 package -->
-<!-- Mon Sep 05 15:13:12 2016 -->
+<!-- Mon Sep 05 15:15:44 2016 -->
 <table border=1>
 <tr> <th>  </th> <th> mpg </th> <th> cyl </th> <th> disp </th> <th> hp </th> <th> drat </th> <th> wt </th> <th> qsec </th> <th> vs </th> <th> am </th> <th> gear </th> <th> carb </th>  </tr>
   <tr> <td align="right"> Mazda RX4 </td> <td align="right"> 21.00 </td> <td align="right"> 6.00 </td> <td align="right"> 160.00 </td> <td align="right"> 110.00 </td> <td align="right"> 3.90 </td> <td align="right"> 2.62 </td> <td align="right"> 16.46 </td> <td align="right"> 0.00 </td> <td align="right"> 1.00 </td> <td align="right"> 4.00 </td> <td align="right"> 4.00 </td> </tr>
@@ -342,7 +342,7 @@ paste_meansd <- function(x, digits = 2, na.rm = TRUE){
 ## The mean (sd) of a random sample of normals is `r paste_meansd(rnorm(100))`
 ```
 
-The mean (sd) of a random sample of normals is 0.11 (1.08)
+The mean (sd) of a random sample of normals is -0.05 (0.97)
 
 
 ```r
@@ -442,6 +442,6 @@ output: slidy_presentation
 10. Wilson, Greg, Bryan, Jennifer, Cranston, Karen, et al. "Good Enough Practices in Scientific Computing" (2016). https://arxiv.org/pdf/1609.00037v1.pdf
 
 
-Source for this talk available at http://github.com/sachsmc/bcore-talk-160906
+Source for this talk available at http://github.com/sachsmc/biostat-core-talk-160906
 
 
