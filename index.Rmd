@@ -8,7 +8,36 @@ output:
 ---
 
 
+# About me
 
+```{r about, echo = FALSE, fig.height = 4}
+library(leaflet)
+plcs <- matrix(c(42.2508564, -87.8278465,
+                    47.65469, -122.3183384,
+                    38.99, -77.1,
+                    59.3251172, 18.0710935), ncol = 2, byrow = TRUE)
+plcs <- as.data.frame(plcs)
+colnames(plcs) <- c("lat", "lng")
+
+Icons <- iconList(
+  lfc = makeIcon("lfc.png", "lfc.png", 75, 66),
+  UW = makeIcon("UW.png", "UW.png", 90, 60),
+  nci = makeIcon("nci.png", "ki.png", 80, 60),
+  ki = makeIcon("ki.png", "ki.png", 84, 52)
+)
+plcs$icon <- Icons
+
+leaflet(data = plcs, width = "100%") %>% setView(lat = 50, lng = -50, zoom = 3) %>% addTiles() %>%
+  addMarkers(~lng, ~lat, icon = ~icon)
+
+```
+
+Interests: 
+
+- Evaluating biomarkers, 
+- developing and evaluating prediction models, 
+- statistical software, 
+- **reproducible research**
 
 # At the lab?
 
@@ -341,6 +370,11 @@ output: slidy_presentation
     - [Biostat Core Report](https://raw.githubusercontent.com/sachsmc/MCmisc/master/inst/rmarkdown/templates/kiconsult/skeleton/skeleton.Rmd)
     - [rticles](https://github.com/rstudio/rticles)
     - [Statistics Journals](https://github.com/sachsmc/pandoc-journal-templates)
++ Examples: 
+    - [JSS paper](https://github.com/sachsmc/plotROC-paper/blob/gh-pages/Paper/sachs2015plotROC.Rmd)
+    - [JBS paper](https://github.com/sachsmc/signature-tutorial/blob/master/Documents/paper-revised.Rmd)
+    - [CCO paper](https://github.com/sachsmc/review-paper-cco/blob/gh-pages/Paper/review-paper-cco.md)
+
 
 # Limitations
 
@@ -366,6 +400,9 @@ output: slidy_presentation
 8. Sachs, Michael C., and Lisa M. McShane. "Issues in developing multivariable molecular signatures for guiding clinical care decisions." _Journal of Biopharmaceutical Statistics_ just-accepted (2016).
 9. Rmarkdown, Rstudio. https://rmarkdown.rstudio.com
 10. Wilson, Greg, Bryan, Jennifer, Cranston, Karen, et al. "Good Enough Practices in Scientific Computing" (2016). https://arxiv.org/pdf/1609.00037v1.pdf
+11. Patil, Prasad, Peng, Roger D., and Jeffrey Leek. "A statistical definition for reproducibility and replicability" (2016), doi: http://dx.doi.org/10.1101/066803.
+
+
 
 
 Source for this talk available at http://github.com/sachsmc/biostat-core-talk-160906
